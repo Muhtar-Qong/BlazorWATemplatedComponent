@@ -1,0 +1,2 @@
+# BlazorWATemplatedComponent
+Blazor templated components.
