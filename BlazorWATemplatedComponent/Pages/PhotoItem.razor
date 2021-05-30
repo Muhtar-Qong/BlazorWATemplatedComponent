@@ -1,0 +1,37 @@
+﻿<div class="col-12">
+    <div class="row gy-2 gx-3" style="width: @(Width + "px")">
+        <div class="col-12">
+            <img width="@Width" height="@Height" src="@FullPath" />
+        </div>
+        <div class="col-10">
+            <h4>@Heading</h4>
+        </div>
+        <div class="col-2">
+            <NavLink class="nav-link" href="">
+                <span class="oi oi-share" aria-hidden="true" title="Share with friends"></span>
+            </NavLink>
+        </div>
+        <div class="col-12 text-wrap">
+            @Description
+        </div>
+    </div>
+</div>
+
+@code {
+
+    [Parameter]
+    public string FullPath { get; set; }
+
+    [Parameter]
+    public int Width { get; set; }
+
+    [Parameter]
+    public int Height { get; set; }
+
+    [Parameter]
+    public string Heading { get; set; }
+
+    [Parameter]
+    public string Description { get; set; }
+
+}

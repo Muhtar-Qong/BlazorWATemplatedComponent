@@ -1,0 +1,58 @@
+[
+  {
+    "fullPath": "https://source.unsplash.com/1600x900/?nature,mountains",
+    "title": "Mountains",
+    "description": "Mountains photo from Unsplash.",
+    "width": "356",
+    "height": "200"
+  },
+  {
+    "fullPath": "https://source.unsplash.com/1600x900/?nature,water",
+    "title": "Water",
+    "description": "Nature, water photo option in Unsplash.",
+    "width": "356",
+    "height": "200"
+  },
+  {
+    "fullPath": "https://source.unsplash.com/1600x900/?nature,sea",
+    "title": "Sea",
+    "description": "Nature, sea photo option in Unsplash site.",
+    "width": "356",
+    "height": "200"
+  },
+  {
+    "fullPath": "https://source.unsplash.com/1600x900/?nature,forest",
+    "title": "Forest",
+    "description": "Natue, forest option in Unsplash site.",
+    "width": "356",
+    "height": "200"
+  },
+  {
+    "fullPath": "https://source.unsplash.com/1600x900/?nature,ocean",
+    "title": "Ocean",
+    "description": "Nature, ocean photo option in Unsplash site.",
+    "width": "356",
+    "height": "200"
+  },
+  {
+    "fullPath": "https://source.unsplash.com/1600x900/?pasture",
+    "title": "Pasture",
+    "description": "Pasture photo option in Unsplash site.",
+    "width": "356",
+    "height": "200"
+  },
+  {
+    "fullPath": "https://source.unsplash.com/1600x900/?beach",
+    "title": "Sea Beach",
+    "description": "Sea beach photo option in Unsplash site.",
+    "width": "356",
+    "height": "200"
+  },
+  {
+    "fullPath": "https://source.unsplash.com/1600x900/?nature,desert",
+    "title": "Desert",
+    "description": "Nature, desert option in Unsplash site.",
+    "width": "356",
+    "height": "200"
+  }
+]

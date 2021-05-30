@@ -1,0 +1,51 @@
+﻿@typeparam TItem
+
+@if (Items.Count == 0)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>@TableHeader</tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < Rows; i++)
+            {
+                <tr>
+                    @for (int j = 0; j < Columns; j++)
+                    {
+                        <td style="border:hidden">
+                            @RowTemplate(Items[j + i * Columns])
+                        </td>
+                    }                 
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>@TableFoot</tr>
+        </tfoot>
+    </table>
+}
+
+@code {
+
+    [Parameter]
+    public RenderFragment TableHeader { get; set; }
+
+    [Parameter]
+    public RenderFragment<TItem> RowTemplate { get; set; }
+
+    [Parameter]
+    public RenderFragment TableFoot { get; set; }
+
+    [Parameter]
+    public IReadOnlyList<TItem> Items { get; set; }
+
+    [Parameter]
+    public int Rows { get; set; }
+
+    [Parameter]
+    public int Columns { get; set; }
+}

@@ -1,0 +1,53 @@
+﻿@page "/myalbum"
+@inject HttpClient Http
+
+<MyTableTemplate Items="photos" Context="photo" Rows="2" Columns="4">
+    <TableHeader>      
+        <tr style="border:none">
+            <th style="border:none">
+                <h3>Album Page with Templated Blazor WASM Component</h3>
+                <hr />
+            </th>
+        </tr>
+    </TableHeader>
+
+    <RowTemplate>        
+        <td style="border:none">
+            <PhotoItem FullPath="@photo.FullPath"
+                       Heading="@photo.Title"
+                       Description="@photo.Description"
+                       Width="@photo.Width"
+                       Height="@photo.Height">
+            </PhotoItem>
+        </td>
+    </RowTemplate>
+
+    <TableFoot>     
+        <tr>           
+            <td style="border:none">
+                <hr />
+                <strong>Credits:</strong> Example pictures are taken from Unsplash.
+                <a href="https://unsplash.com/">Unsplash</a>
+            </td>
+        </tr>
+    </TableFoot>
+</MyTableTemplate>
+
+@code {
+
+    private List<Photo> photos = new List<Photo>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        photos = await Http.GetFromJsonAsync<List<Photo>>("sample-data/photoitems.json");
+    }
+
+    public class Photo
+    {
+        public string FullPath { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public int Width { get; set; }
+        public int Height { get; set; }
+    }
+}
